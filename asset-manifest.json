@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/DoWell-Classification/static/css/main.83d6c044.css",
+    "main.js": "/DoWell-Classification/static/js/main.45ed8fb7.js",
+    "static/js/787.cecb67f1.chunk.js": "/DoWell-Classification/static/js/787.cecb67f1.chunk.js",
+    "index.html": "/DoWell-Classification/index.html",
+    "main.83d6c044.css.map": "/DoWell-Classification/static/css/main.83d6c044.css.map",
+    "main.45ed8fb7.js.map": "/DoWell-Classification/static/js/main.45ed8fb7.js.map",
+    "787.cecb67f1.chunk.js.map": "/DoWell-Classification/static/js/787.cecb67f1.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.83d6c044.css",
+    "static/js/main.45ed8fb7.js"
+  ]
+}
