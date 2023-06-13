@@ -1,7 +1,7 @@
 import React from 'react'
 import axios from 'axios'
 import './SaveSelectedBasketOrder.css';
- 
+
 function SaveSelectedBasketOrder({selectedBasket, inserted_id}) {
   const [message, setMessage] = React.useState("")
 
@@ -30,6 +30,5 @@ function SaveSelectedBasketOrder({selectedBasket, inserted_id}) {
 }
 
 export default SaveSelectedBasketOrder;
-
   
       

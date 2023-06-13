@@ -81,4 +81,4 @@ function ClassificationType() {
   )
 }
 
-export default ClassificationType
+export default ClassificationType;
