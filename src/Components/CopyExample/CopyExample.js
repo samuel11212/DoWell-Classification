@@ -1,4 +1,6 @@
 import React, { useRef, useState } from 'react';
+import { NavLink } from 'react-router-dom'
+
 
 export default function CopyExample() {
 
@@ -32,6 +34,14 @@ export default function CopyExample() {
           value='63d8ec5e790d8f03c1318997'
         />
       </form>
+      <li className="nav-item">
+              <NavLink
+              exact
+                to="/ClassificationType"
+              >
+                NextPage
+              </NavLink>
+        </li>
     </div>
   );
 }

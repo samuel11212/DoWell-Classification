@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react'
+import React, {useState} from 'react'
 import './ItemNum.css'
 import Baskets from './Baskets'
 import axios from 'axios'
@@ -6,16 +6,12 @@ import LevelData from './LevelData'
 import arrayData from './arrayData'
 import { useDispatch, useSelector } from 'react-redux'
 import { assignBasketId } from '../../app/features/counter/CounterSlice'
-//import ClassificationType from '../ClassificationTypes/ClassificationType'
 import CopyExample from '../CopyExample/CopyExample'
-import { NavLink } from 'react-router-dom'
+//import ClassificationType from '../ClassificationTypes/ClassificationType'
 
 
 function ItemNum({ i }) {
-  const [renderCopyExample, setRenderCopyExample] = useState(false);
-  useEffect(() => {
-    setRenderCopyExample(true);
-  }, []);
+  const [isrendered, setisrendered] = useState(false);
   
   const dispatch = useDispatch()
   const [itemName, setItemName] = React.useState("")
@@ -75,15 +71,8 @@ function ItemNum({ i }) {
    
       </div>
      */}
-      {renderCopyExample && <CopyExample />}
-      <li className="nav-item">
-              <NavLink
-              exact
-                to="/ClassificationType"
-              >
-                NextPage
-              </NavLink>
-        </li>
+      <input type="button" onClick={() =>{ setisrendered(true)}} />click to continue
+      {isrendered && <CopyExample />}
     </div>
   )
 }

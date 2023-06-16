@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import axios from 'axios'
 import './ClassificationType.css'
 import arrayData from '../UserInputs/arrayData'
-import BasketSelection from '../BasketSelection/BasketSelection'
+//import BasketSelection from '../BasketSelection/BasketSelection'
 
 function ClassificationType() {
  

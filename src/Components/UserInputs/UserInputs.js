@@ -8,7 +8,7 @@ import { assignBasketId, assignItemNum } from '../../app/features/counter/Counte
 function UserInputs() {
 
 
-  const dispatch = useDispatch()
+  const dispatch = useDispatch()  
   const [levels, setLevels] = useState(0)
   
   React.useEffect(() => {
@@ -44,7 +44,7 @@ function UserInputs() {
              return <ItemNum key={i} i={i+1} />
           })
       }
-      </div>  
+      </div> 
     </div>
   )
 }
