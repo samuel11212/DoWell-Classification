@@ -21,4 +21,4 @@ function LevelData({levelName, inputCount}) {
   )
 }
 
-export default LevelData
+export default LevelData;

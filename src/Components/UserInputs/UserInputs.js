@@ -1,14 +1,15 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './UserInputs.css'
 import arrayData from './arrayData'
 import ItemNum from './ItemNum'
-import { useDispatch} from 'react-redux'
-import { assignBasketId, assignItemNum} from '../../app/features/counter/CounterSlice'
+import { useDispatch } from 'react-redux'
+import { assignBasketId, assignItemNum } from '../../app/features/counter/CounterSlice'
 
 function UserInputs() {
 
+
   const dispatch = useDispatch()
-  const [levels, setLevels] = React.useState(0)
+  const [levels, setLevels] = useState(0)
   
   React.useEffect(() => {
     dispatch(assignBasketId(""))
@@ -43,7 +44,7 @@ function UserInputs() {
              return <ItemNum key={i} i={i+1} />
           })
       }
-        </div>  
+      </div>  
     </div>
   )
 }

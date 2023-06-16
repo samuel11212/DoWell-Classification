@@ -14,9 +14,9 @@ function ClassificationType() {
                                                     })
   
   const [message, setMessage] = React.useState("")
-  const [baskets, setBaskets] = React.useState([])
-  const [insertedId, setinsertedId] = React.useState("")
   const [isEmpty, setIsEmpty] = React.useState(false)
+  //const [baskets, setBaskets] = React.useState([])
+  const [insertedId, setinsertedId] = React.useState("")
 
   const handleChange = (event) => {
   const {name,value, type, checked} = event.target
@@ -40,9 +40,9 @@ function ClassificationType() {
   })
 
   console.log(resp.data)
-  setMessage(()=>resp.data.message)
-  setBaskets(()=>resp.data.baskets)
-  setinsertedId(()=>resp.data.insertedId)
+    setMessage(() => resp.data.message)
+    //setBaskets(()=>resp.data.baskets)
+    setinsertedId(()=>resp.data.insertedId)
   setIsEmpty(false)
   }catch(err){
     console.log(err.response)
@@ -52,6 +52,21 @@ function ClassificationType() {
   return (
     <div className='classificationTypes'>
       <div className='cType'>
+
+
+        <div className='form-row'>
+          <label htmlFor='email' className='form-label'>
+            dbInsertedId
+          </label>
+          <input
+            type='email'
+            className='form-input'
+            value={insertedId}
+            onChange={handleChange}
+          />
+        </div>
+
+
         <label>Enter number of levels</label>
         <input type="Number" placeholder="Number of Levels" onChange={handleChange} name="numberOfLevels" value={classificationTypeData.numberOfLevels}/>
       </div>
@@ -63,11 +78,12 @@ function ClassificationType() {
           <label htmlFor='clType'>H</label>
           <input type="radio" id="T" name='clType' value="T" onChange={handleChange} checked={classificationTypeData.clType === "T"}/>
           <label htmlFor='clType'>T</label>
-        </div>
+      </div>
       <button onClick={saveClassificationType}>Save classification</button>
       {
         isEmpty ? <div className='loadingSpinner'></div> : <div className='classificationType'> 
           <p>{message}</p>
+          {/*
           <div className='baskets'>
             {
               baskets.map((basket) => {
@@ -75,6 +91,7 @@ function ClassificationType() {
               })
             }
           </div>
+          */}
         </div>
       }
     </div>

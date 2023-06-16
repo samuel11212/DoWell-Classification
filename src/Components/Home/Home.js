@@ -1,17 +1,23 @@
 import React from 'react'
-import {HashRouter, Routes, Route} from 'react-router-dom'
-import UserInputs from '../UserInputs/UserInputs'
+import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+import UserInputs from '../UserInputs/UserInputs';
+import ClassificationType from "../ClassificationTypes/ClassificationType";
 
 function Home() {
+
   return (
+   
     <div className='home'>
-      <HashRouter>
+      <Router>
+      <div className="pages">
         <Routes>
-        <Route path="/" element={<UserInputs />}/>
+          <Route path="/"  element={<UserInputs />} />
+          <Route path="/ClassificationType" exact element={<ClassificationType />} />
         </Routes>
-        </HashRouter>
+      </div>
+      </Router>
     </div>
   )
 }
 
-export default Home
+export default Home;
